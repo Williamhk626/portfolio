@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>W</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+
+            <div class="name logo">
+                <h1><a href="index.html">W</a></h1>
+            </div>
+            
+            <div class="burger" onclick="burger()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            <nav>
+                <ul class="links">
+                    <li><a href="#top" onclick="burger()">Home</a></li>
+                    <li><a href="#projects" onclick="burger()">Projects</a></li>
+                    <li><a href="#about" onclick="burger()">About</a></li>
+                    <li><a href="#contact" onclick="burger()">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="intro">
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </section>
+
+        <section class="about" id="about">
+            <h1>About me</h1>
+            <img src="img/about/profile.png" alt="" draggable="false">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum unde, est laudantium iure accusamus culpa aspernatur nihil architecto nulla quae rem omnis nisi eveniet enim odio laborum non nobis! Id?</p>
+        </section>
+
+        <main id="projects">
+            
+            <div class="overlay" onclick="overlay(); fullscreen()"></div>
+
+            <h2>Projects</h2>
+            <section class="projects">
+                <article class="project" onclick="overlay(); fullscreen(this)">
+                    <img src="img/projects/project.jpeg" alt="">
+                    <h3>project 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quas.</p>
+                </article>
+                <article class="project" onclick="overlay(); fullscreen(this)">
+                    <img src="img/projects/project.jpeg" alt="">
+                    <h3>Project 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, harum?</p>
+                </article>
+                <article class="project" onclick="overlay(); fullscreen(this)">
+                    <img src="img/projects/project.jpeg" alt="">
+                    <h3>Project 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, error.</p>
+                </article>
+                <article class="project" onclick="overlay(); fullscreen(this)">
+                    <img src="img/projects/project.jpeg" alt="">
+                    <h3>Project 4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, odio.</p>
+                </article>
+                <article class="project" onclick="overlay(); fullscreen(this)">
+                    <img src="img/projects/project.jpeg" alt="">
+                    <h3>Project 5</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, facilis?</p>
+                </article>
+        </main>
+
+        <footer id="contact">
+                <h2>Contact</h2>
+                <div class="contact-methods">
+                    <div class="email">
+                        <img src="img/icons/email_icon.png" alt="Project picture">
+                        <p>Email <br> will@ed.dk</p>
+                    </div>
+
+                    <div class="phone">
+                        <img src="img/icons/" alt="">
+                        <p>Phone <br> 123091231</p>
+                    </div> 
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script> 
+        function burger() {
+            const burger = document.getElementsByClassName("burger")[0];
+            burger.classList.toggle("burger-expanded");
+            // Nav expand
+            const nav =  document.getElementsByClassName("links")[0];
+            nav.classList.toggle('links-expanded'); 
+
+            const backgroundBlur = document.getElementsByClassName("container")[0];
+            backgroundBlur.classList.toggle("blur");  
+        }
+
+        function overlay() {
+            const overlay = document.getElementsByClassName("overlay")[0];
+            overlay.classList.toggle("open");
+
+            const htmlTag = document.getElementsByTagName("html")[0];
+            htmlTag.classList.toggle("lockScroll")
+
+        }
+
+        function fullscreen(element = undefined) {
+            if (element === undefined) {
+                const findElement = document.getElementsByClassName("fullscreen")[0];
+                findElement.classList.toggle("fullscreen");
+            } else {
+                element.classList.toggle("fullscreen");
+            }
+
+            element.classList.toggle("zoom-in");
+            element.classList.toggle("zoom-out");
+
+            
+        }
+        
+
+    </script>
+</body>
+
+</html>
