@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    
+
     <title>W</title>
 </head>
+
 <body>
     <div class="container">
         <header>
 
             <div class="name logo">
-                <h1><a href="index.html">W</a></h1>
+                <h1><a href="index.html">William</a></h1>
             </div>
-            
+
             <div class="burger" onclick="burger()">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
             <nav>
                 <ul class="links">
                     <li><a href="#top" onclick="burger()">Home</a></li>
@@ -31,76 +33,110 @@
             </nav>
         </header>
         <section class="intro">
-            <h1>Welcome</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <h1>Velkommen til mit portfolio</h1>
+            <p></p>
         </section>
 
         <section class="about" id="about">
             <h1>About me</h1>
             <img src="img/about/profile.png" alt="" draggable="false">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum unde, est laudantium iure accusamus culpa aspernatur nihil architecto nulla quae rem omnis nisi eveniet enim odio laborum non nobis! Id?</p>
+            <p></p>
         </section>
 
         <main id="projects">
-            
+
             <div class="overlay" onclick="overlay(); fullscreen()"></div>
 
             <h2>Projects</h2>
             <section class="projects">
                 <article class="project" onclick="overlay(); fullscreen(this)">
-                    <img src="img/projects/project.jpeg" alt="">
-                    <h3>project 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quas.</p>
+                    <img src="img/projects/Acme/Screenshot_2018-11-07 Acme Web Design Welcome.png" alt="">
+                    <div class="details">
+                        <h3>Acme Design</h3>
+                        <p class="short">Acme desgin var omkring at lave en hjemmeside og gøre den responsiv.</p>
+                        <p class="full">Acme design var den første hjemmeside, hvor jeg fik en video guide som jeg
+                            fulgte, som så viste hvordan man lavede en hjemmeside og gjorde den Responsiv</p>
+                        <p><a href="https://acme.will1400.aspitcloud.dk" class="site-link">Klik her for at siden</a></p>
+                    </div>
                 </article>
                 <article class="project" onclick="overlay(); fullscreen(this)">
-                    <img src="img/projects/project.jpeg" alt="">
-                    <h3>Project 2</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, harum?</p>
+                    <img src="img/projects/spider/Screenshot_2018-11-08 SIDETITEL .png" alt="">
+                    <div class="details">
+                        <h3>Edderkop</h3>
+                        <p class="short">Edderkop skulle styles så det lignede et billedet</p>
+                        <p class="full">Edderkop er en hjemmesiden jeg skulle style så det lignede et færdigt billede</p>
+                        <p><a href="https://edderkop.will1400.aspitcloud.dk" class="site-link">Klik her for at siden</a></p>
+                        
+                    </div>
                 </article>
                 <article class="project" onclick="overlay(); fullscreen(this)">
-                    <img src="img/projects/project.jpeg" alt="">
-                    <h3>Project 3</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, error.</p>
+                    <img src="img/projects/cat/Screenshot_2018-11-08 Flexbox opgave 1.png" alt="">
+                    <div class="details">
+                        <h3>Katte galleri</h3>
+                        <p class="short">Hjemmeside uden noget layout, som jeg skulle lave layout til.</p>
+                        <p class="full">Katte galleriet manglede layout, som jeg skulle lave ved kun at bruge Flexbox.</p>
+                        <p><a href="https://flexboxkat.will1400.aspitcloud.dk" class="site-link">Klik her for at siden</a></p>
+                        
+                    </div>
                 </article>
                 <article class="project" onclick="overlay(); fullscreen(this)">
-                    <img src="img/projects/project.jpeg" alt="">
-                    <h3>Project 4</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, odio.</p>
+                    <img src="img/projects/css grid master/Screenshot_2018-11-08 Recreating Codepen .png" alt="">
+                    <div class="details">
+                        <h3>Codepen</h3>
+                        <p class="short">Stylet en hjemmeside så den kom til at ligne et billet af Codepen</p>
+                        <p class="full">Stylet en hjemmeside så den kom til at ligne et billet af Codepen</p>
+                        <p><a href="https://codepen.will1400.aspitcloud.dk" class="site-link">Klik her for at siden</a></p>
+                        
+                    </div>
                 </article>
                 <article class="project" onclick="overlay(); fullscreen(this)">
-                    <img src="img/projects/project.jpeg" alt="">
-                    <h3>Project 5</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, facilis?</p>
+                    <img src="img/projects/css grid master/Screenshot_2018-11-08 Responsive Website .jpg" alt="">
+                    <div class="details">
+                        <h3>Taco shop</h3>
+                        <p class="short">Taco shop skulle styles og gøres responsiv</p>
+                        <p class="full">Taco shop skulle styles efter en færdig hjemmeside, og gøres responsiv</p>
+                        
+                    </div>
+                </article>
+                </article>
+                <article class="project" onclick="overlay(); fullscreen(this)">
+                    <img src="img/projects/biludstilling/Screenshot_2018-11-08 Geneva.png" alt="">
+                    <div class="details">
+                        <h3>Geneva</h3>
+                        <p class="short">Geneva er lavet fra bunden, ud fra et færdig billed</p>
+                        <p class="full">Genevar er lavet fra bunden, hvor jeg fik et billed som det skulle ende med at ligne.</p>
+                        
+                    </div>
                 </article>
         </main>
 
         <footer id="contact">
-                <h2>Contact</h2>
-                <div class="contact-methods">
-                    <div class="email">
-                        <img src="img/icons/email_icon.png" alt="Project picture">
-                        <p>Email <br> will@ed.dk</p>
-                    </div>
+            <h2>Contact</h2>
+            <div class="contact-methods">
+                <div class="email">
+                    <img src="img/icons/email_icon.png" alt="Project picture">
+                    <p>Email <br> will@ed.dk</p>
+                </div>
 
-                    <div class="phone">
-                        <img src="img/icons/" alt="">
-                        <p>Phone <br> 123091231</p>
-                    </div> 
+                <div class="phone">
+                    <img src="img/icons/" alt="">
+                    <p>Phone <br> 123091231</p>
                 </div>
             </div>
-        </footer>
+    </div>
+    </footer>
     </div>
 
-    <script> 
+    <script>
         function burger() {
             const burger = document.getElementsByClassName("burger")[0];
             burger.classList.toggle("burger-expanded");
             // Nav expand
-            const nav =  document.getElementsByClassName("links")[0];
-            nav.classList.toggle('links-expanded'); 
+            const nav = document.getElementsByClassName("links")[0];
+            nav.classList.toggle('links-expanded');
 
             const backgroundBlur = document.getElementsByClassName("container")[0];
-            backgroundBlur.classList.toggle("blur");  
+            backgroundBlur.classList.toggle("blur");
         }
 
         function overlay() {
@@ -116,16 +152,14 @@
             if (element === undefined) {
                 const findElement = document.getElementsByClassName("fullscreen")[0];
                 findElement.classList.toggle("fullscreen");
+                findElement.classList.toggle("zoom-in");
+
             } else {
                 element.classList.toggle("fullscreen");
             }
-
             element.classList.toggle("zoom-in");
-            element.classList.toggle("zoom-out");
-
-            
         }
-        
+
 
     </script>
 </body>
