@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>W</title>
+    <title>William's Portfolio</title>
 </head>
 
 <body>
@@ -119,12 +119,12 @@
             <div class="contact-methods">
                 <div class="email">
                     <img src="img/icons/email_icon.png" alt="Project picture">
-                    <p>Email <br> will@ed.dk</p>
+                    <p>Email <br> Unavailable</p>
                 </div>
 
                 <div class="phone">
                     <img src="img/icons/" alt="">
-                    <p>Phone <br> 123091231</p>
+                    <p>Phone <br> Unavailable</p>
                 </div>
             </div>
     </div>
@@ -132,6 +132,11 @@
     </div>
 
     <script>
+        function lockHtmlScroll(status) {
+            const html = document.getElementsByTagName("html")[0]; 
+            html.classList.toggle("lockScroll");
+        }
+
         function burger() {
             const burger = document.getElementsByClassName("burger")[0];
             burger.classList.toggle("burger-expanded");
@@ -141,9 +146,10 @@
 
             const backgroundBlur = document.getElementsByClassName("container")[0];
             backgroundBlur.classList.toggle("blur");
+
+            lockHtmlScroll();
         }
 
-        const html = document.getElementsByTagName("html")[0];
 
         function openOverlay(e) {
             const overlay = document.querySelector('.overlay');
@@ -152,7 +158,7 @@
             overlayContent.innerHTML = article.innerHTML;
             overlay.classList.add('open');
 
-            html.classList.add("lockScroll");
+            lockHtmlScroll();
         }
 
         const project = document.querySelectorAll('.project');
@@ -163,7 +169,7 @@
             const overlay = document.querySelector(".overlay");
 
             overlay.classList.remove("open");
-            html.classList.remove("lockScroll");
+            lockHtmlScroll();
         }
 
 

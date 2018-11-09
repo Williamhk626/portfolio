@@ -175,7 +175,6 @@ main h2::after {
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
     justify-content: center;
-
 }
 
 .projects article {
@@ -183,7 +182,6 @@ main h2::after {
     border-radius: 5px;
     height: 400px;
     transition: transform .1s ease-in-out;
-
 }
 
 .projects article .short {
@@ -382,11 +380,9 @@ footer .email img {
         overflow: hidden;
         -webkit-transition: all 1s ease-in-out;
         transition: all .4s ease-in-out;
-
         display: grid;
         justify-items: center;
     }
-    
     nav.expanded {
         height: 60vh;
         background: #272727;
@@ -399,7 +395,6 @@ footer .email img {
         position: relative;
         top: 0px;
     }
-
     nav ul li {
         width: 90vw;
     }
