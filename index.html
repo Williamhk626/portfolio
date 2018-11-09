@@ -11,11 +11,19 @@
 </head>
 
 <body>
+
+    <div class="overlay" onclick="closeOverlay()">
+        <div class="project-overlay">
+
+
+        </div>
+    </div>
+
     <div class="container">
         <header>
 
             <div class="name logo">
-                <h1><a href="index.html">William</a></h1>
+                <h1><a href="index.html">W</a></h1>
             </div>
 
             <div class="burger" onclick="burger()">
@@ -45,67 +53,63 @@
 
         <main id="projects">
 
-            <div class="overlay" onclick="overlay(); fullscreen()"></div>
-
             <h2>Projects</h2>
             <section class="projects">
-                <article class="project" onclick="overlay(); fullscreen(this)">
+                <article class="project">
                     <img src="img/projects/Acme/Screenshot_2018-11-07 Acme Web Design Welcome.png" alt="">
                     <div class="details">
                         <h3>Acme Design</h3>
                         <p class="short">Acme desgin var omkring at lave en hjemmeside og gøre den responsiv.</p>
                         <p class="full">Acme design var den første hjemmeside, hvor jeg fik en video guide som jeg
                             fulgte, som så viste hvordan man lavede en hjemmeside og gjorde den Responsiv</p>
-                        <p><a href="https://acme.will1400.aspitcloud.dk" class="site-link">Klik her for at siden</a></p>
                     </div>
+                    <a href="https://acme.will1400.aspitcloud.dk" class="site-link">Klik her for at se siden</a>
                 </article>
-                <article class="project" onclick="overlay(); fullscreen(this)">
+                <article class="project">
                     <img src="img/projects/spider/Screenshot_2018-11-08 SIDETITEL .png" alt="">
                     <div class="details">
                         <h3>Edderkop</h3>
                         <p class="short">Edderkop skulle styles så det lignede et billedet</p>
                         <p class="full">Edderkop er en hjemmesiden jeg skulle style så det lignede et færdigt billede</p>
-                        <p><a href="https://edderkop.will1400.aspitcloud.dk" class="site-link">Klik her for at siden</a></p>
-                        
                     </div>
+                    <a href="https://edderkop.will1400.aspitcloud.dk" class="site-link">Klik her for at se siden</a>
                 </article>
-                <article class="project" onclick="overlay(); fullscreen(this)">
+                <article class="project">
                     <img src="img/projects/cat/Screenshot_2018-11-08 Flexbox opgave 1.png" alt="">
                     <div class="details">
                         <h3>Katte galleri</h3>
                         <p class="short">Hjemmeside uden noget layout, som jeg skulle lave layout til.</p>
                         <p class="full">Katte galleriet manglede layout, som jeg skulle lave ved kun at bruge Flexbox.</p>
-                        <p><a href="https://flexboxkat.will1400.aspitcloud.dk" class="site-link">Klik her for at siden</a></p>
-                        
                     </div>
+                    <a href="https://flexboxkat.will1400.aspitcloud.dk" class="site-link">Klik her for at se siden</a>
                 </article>
-                <article class="project" onclick="overlay(); fullscreen(this)">
+                <article class="project">
                     <img src="img/projects/css grid master/Screenshot_2018-11-08 Recreating Codepen .png" alt="">
                     <div class="details">
                         <h3>Codepen</h3>
                         <p class="short">Stylet en hjemmeside så den kom til at ligne et billet af Codepen</p>
                         <p class="full">Stylet en hjemmeside så den kom til at ligne et billet af Codepen</p>
-                        <p><a href="https://codepen.will1400.aspitcloud.dk" class="site-link">Klik her for at siden</a></p>
-                        
                     </div>
+                    <a href="https://codepen.will1400.aspitcloud.dk" class="site-link">Klik her for at se siden</a>
                 </article>
-                <article class="project" onclick="overlay(); fullscreen(this)">
+                <article class="project">
                     <img src="img/projects/css grid master/Screenshot_2018-11-08 Responsive Website .jpg" alt="">
                     <div class="details">
                         <h3>Taco shop</h3>
                         <p class="short">Taco shop skulle styles og gøres responsiv</p>
                         <p class="full">Taco shop skulle styles efter en færdig hjemmeside, og gøres responsiv</p>
-                        
+
                     </div>
                 </article>
                 </article>
-                <article class="project" onclick="overlay(); fullscreen(this)">
+                <article class="project" ">
                     <img src="img/projects/biludstilling/Screenshot_2018-11-08 Geneva.png" alt="">
                     <div class="details">
                         <h3>Geneva</h3>
                         <p class="short">Geneva er lavet fra bunden, ud fra et færdig billed</p>
-                        <p class="full">Genevar er lavet fra bunden, hvor jeg fik et billed som det skulle ende med at ligne.</p>
-                        
+                        <p class="full">Genevar er lavet fra bunden, hvor jeg fik et billed som det skulle ende med at
+                            ligne.</p>
+
                     </div>
                 </article>
         </main>
@@ -139,26 +143,30 @@
             backgroundBlur.classList.toggle("blur");
         }
 
-        function overlay() {
-            const overlay = document.getElementsByClassName("overlay")[0];
-            overlay.classList.toggle("open");
+        const html = document.getElementsByTagName("html")[0];
 
-            const htmlTag = document.getElementsByTagName("html")[0];
-            htmlTag.classList.toggle("lockScroll")
+        function openOverlay(e) {
+            const overlay = document.querySelector('.overlay');
+            const overlayContent = overlay.querySelector(".project-overlay");
+            const article = e.currentTarget;
+            overlayContent.innerHTML = article.innerHTML;
+            overlay.classList.add('open');
 
+            html.classList.add("lockScroll");
         }
 
-        function fullscreen(element = undefined) {
-            if (element === undefined) {
-                const findElement = document.getElementsByClassName("fullscreen")[0];
-                findElement.classList.toggle("fullscreen");
-                findElement.classList.toggle("zoom-in");
+        const project = document.querySelectorAll('.project');
 
-            } else {
-                element.classList.toggle("fullscreen");
-            }
-            element.classList.toggle("zoom-in");
+        project.forEach(item => item.addEventListener('click', openOverlay));
+
+        function closeOverlay() {
+            const overlay = document.querySelector(".overlay");
+
+            overlay.classList.remove("open");
+            html.classList.remove("lockScroll");
         }
+
+
 
 
     </script>
